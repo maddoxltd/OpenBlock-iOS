@@ -21,20 +21,23 @@
 	
 	__weak typeof(self) weakSelf = self;
 	
-	self.numberDownloader = [[NumberDownloader alloc] init];
-	self.numberDownloader.numbersChanged = ^(NSArray *numbers){
+	self.numberDownloader = [[NumberDownloader alloc] initWithChangedBlock:^(NSArray *numbers) {
 		dispatch_async(dispatch_get_main_queue(), ^{
 			__strong typeof(weakSelf) strongSelf = weakSelf;
 			
 			strongSelf.numbers = numbers;
 			[strongSelf.tableView reloadData];
 		});
-	};
+	}];
+
 	[self.numberDownloader downloadNumbers];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+	if ([self.numbers count] == 0){
+		return 1;
+	}
 	return [self.numbers count];
 }
 
@@ -42,10 +45,15 @@
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 	
-	NSDictionary *number = self.numbers[indexPath.row];
-	
-	cell.textLabel.text = number[@"number"];
-	cell.detailTextLabel.text = number[@"description"];
+	if ([self.numbers count] == 0){
+		cell.detailTextLabel.text = @"Waiting to download numbers...";
+		cell.textLabel.text = nil;
+	} else {
+		NSDictionary *number = self.numbers[indexPath.row];
+		
+		cell.textLabel.text = number[@"number"];
+		cell.detailTextLabel.text = number[@"description"];
+	}
 	
 	return cell;
 }

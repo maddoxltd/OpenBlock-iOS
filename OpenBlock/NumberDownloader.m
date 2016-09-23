@@ -11,6 +11,27 @@
 
 @implementation NumberDownloader
 
+- (instancetype)initWithChangedBlock:(void (^)(NSArray *numbers))changedBlock
+{
+	if (self = [super init]){
+		_numbersChanged = [changedBlock copy];
+		
+		__weak typeof(self) weakSelf = self;
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+			__strong typeof(weakSelf) strongSelf = weakSelf;
+			[strongSelf loadNumbersFromDisk];
+		});
+	}
+	return self;
+}
+
+- (void)loadNumbersFromDisk
+{
+	if (self.numbersChanged){
+		self.numbersChanged([self blockNumbersInContext:nil]);
+	}
+}
+
 - (void)downloadNumbers
 {
 	NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];

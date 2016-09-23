@@ -13,6 +13,7 @@
 
 @property (nonatomic, copy) void (^numbersChanged)(NSArray *numbers);
 
+- (instancetype)initWithChangedBlock:(void (^)(NSArray *numbers))changedBlock;
 - (void)downloadNumbers;
 - (NSArray *)blockNumbersInContext:(CXCallDirectoryExtensionContext *)context;
 
