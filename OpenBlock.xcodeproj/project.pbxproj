@@ -13,7 +13,68 @@
 		F4AC9E911D95C01E000E5543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AC9E8F1D95C01E000E5543 /* Main.storyboard */; };
 		F4AC9E931D95C01E000E5543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AC9E921D95C01E000E5543 /* Assets.xcassets */; };
 		F4AC9E961D95C01F000E5543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AC9E941D95C01E000E5543 /* LaunchScreen.storyboard */; };
+		F4AC9EA51D95C032000E5543 /* CallDirectoryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AC9EA41D95C032000E5543 /* CallDirectoryHandler.m */; };
+		F4AC9EA91D95C032000E5543 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F4AC9EA11D95C032000E5543 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F4AC9EB01D95C2F9000E5543 /* NumberDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AC9EAF1D95C2F9000E5543 /* NumberDownloader.m */; };
+		F4AC9EBA1D95C555000E5543 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AC9EB71D95C541000E5543 /* ZipArchive.framework */; };
+		F4AC9EBB1D95C555000E5543 /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AC9EB71D95C541000E5543 /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4AC9EA71D95C032000E5543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AC9E7B1D95C01E000E5543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AC9EA01D95C032000E5543;
+			remoteInfo = Extension;
+		};
+		F4AC9EB61D95C541000E5543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B423AE1A1C0DF76A0004A2F1;
+			remoteInfo = "ZipArchive-iOS";
+		};
+		F4AC9EB81D95C541000E5543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AFF75A241C37279600F450AC;
+			remoteInfo = "ZipArchive-Mac";
+		};
+		F4AC9EBC1D95C555000E5543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B423AE191C0DF76A0004A2F1;
+			remoteInfo = "ZipArchive-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4AC9EAD1D95C032000E5543 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F4AC9EA91D95C032000E5543 /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AC9EBE1D95C555000E5543 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4AC9EBB1D95C555000E5543 /* ZipArchive.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F4AC9E831D95C01E000E5543 /* OpenBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +87,25 @@
 		F4AC9E921D95C01E000E5543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4AC9E951D95C01E000E5543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4AC9E971D95C01F000E5543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AC9EA11D95C032000E5543 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AC9EA31D95C032000E5543 /* CallDirectoryHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallDirectoryHandler.h; sourceTree = "<group>"; };
+		F4AC9EA41D95C032000E5543 /* CallDirectoryHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallDirectoryHandler.m; sourceTree = "<group>"; };
+		F4AC9EA61D95C032000E5543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AC9EAE1D95C2F9000E5543 /* NumberDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDownloader.h; sourceTree = "<group>"; };
+		F4AC9EAF1D95C2F9000E5543 /* NumberDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDownloader.m; sourceTree = "<group>"; };
+		F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZipArchive.xcodeproj; path = Vendor/ZipArchive/ZipArchive.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F4AC9E801D95C01E000E5543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AC9EBA1D95C555000E5543 /* ZipArchive.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AC9E9E1D95C032000E5543 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AC9E851D95C01E000E5543 /* OpenBlock */,
+				F4AC9EA21D95C032000E5543 /* Extension */,
 				F4AC9E841D95C01E000E5543 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AC9E831D95C01E000E5543 /* OpenBlock.app */,
+				F4AC9EA11D95C032000E5543 /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,10 +136,13 @@
 		F4AC9E851D95C01E000E5543 /* OpenBlock */ = {
 			isa = PBXGroup;
 			children = (
+				F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */,
 				F4AC9E891D95C01E000E5543 /* AppDelegate.h */,
 				F4AC9E8A1D95C01E000E5543 /* AppDelegate.m */,
 				F4AC9E8C1D95C01E000E5543 /* ViewController.h */,
 				F4AC9E8D1D95C01E000E5543 /* ViewController.m */,
+				F4AC9EAE1D95C2F9000E5543 /* NumberDownloader.h */,
+				F4AC9EAF1D95C2F9000E5543 /* NumberDownloader.m */,
 				F4AC9E8F1D95C01E000E5543 /* Main.storyboard */,
 				F4AC9E921D95C01E000E5543 /* Assets.xcassets */,
 				F4AC9E941D95C01E000E5543 /* LaunchScreen.storyboard */,
@@ -79,6 +160,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F4AC9EA21D95C032000E5543 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4AC9EA31D95C032000E5543 /* CallDirectoryHandler.h */,
+				F4AC9EA41D95C032000E5543 /* CallDirectoryHandler.m */,
+				F4AC9EA61D95C032000E5543 /* Info.plist */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4AC9EB21D95C540000E5543 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4AC9EB71D95C541000E5543 /* ZipArchive.framework */,
+				F4AC9EB91D95C541000E5543 /* ZipArchive.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +189,36 @@
 				F4AC9E7F1D95C01E000E5543 /* Sources */,
 				F4AC9E801D95C01E000E5543 /* Frameworks */,
 				F4AC9E811D95C01E000E5543 /* Resources */,
+				F4AC9EAD1D95C032000E5543 /* Embed App Extensions */,
+				F4AC9EBE1D95C555000E5543 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F4AC9EA81D95C032000E5543 /* PBXTargetDependency */,
+				F4AC9EBD1D95C555000E5543 /* PBXTargetDependency */,
 			);
 			name = OpenBlock;
 			productName = OpenBlock;
 			productReference = F4AC9E831D95C01E000E5543 /* OpenBlock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F4AC9EA01D95C032000E5543 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AC9EAA1D95C032000E5543 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				F4AC9E9D1D95C032000E5543 /* Sources */,
+				F4AC9E9E1D95C032000E5543 /* Frameworks */,
+				F4AC9E9F1D95C032000E5543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = F4AC9EA11D95C032000E5543 /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +230,11 @@
 				ORGANIZATIONNAME = "Maddox Ltd";
 				TargetAttributes = {
 					F4AC9E821D95C01E000E5543 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7BA6M6T665;
+						ProvisioningStyle = Automatic;
+					};
+					F4AC9EA01D95C032000E5543 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7BA6M6T665;
 						ProvisioningStyle = Automatic;
@@ -126,12 +252,36 @@
 			mainGroup = F4AC9E7A1D95C01E000E5543;
 			productRefGroup = F4AC9E841D95C01E000E5543 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F4AC9EB21D95C540000E5543 /* Products */;
+					ProjectRef = F4AC9EB11D95C540000E5543 /* ZipArchive.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F4AC9E821D95C01E000E5543 /* OpenBlock */,
+				F4AC9EA01D95C032000E5543 /* Extension */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F4AC9EB71D95C541000E5543 /* ZipArchive.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZipArchive.framework;
+			remoteRef = F4AC9EB61D95C541000E5543 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F4AC9EB91D95C541000E5543 /* ZipArchive.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZipArchive.framework;
+			remoteRef = F4AC9EB81D95C541000E5543 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F4AC9E811D95C01E000E5543 /* Resources */ = {
@@ -144,6 +294,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4AC9E9F1D95C032000E5543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -152,12 +309,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AC9E8E1D95C01E000E5543 /* ViewController.m in Sources */,
+				F4AC9EB01D95C2F9000E5543 /* NumberDownloader.m in Sources */,
 				F4AC9E8B1D95C01E000E5543 /* AppDelegate.m in Sources */,
 				F4AC9E881D95C01E000E5543 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4AC9E9D1D95C032000E5543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AC9EA51D95C032000E5543 /* CallDirectoryHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4AC9EA81D95C032000E5543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AC9EA01D95C032000E5543 /* Extension */;
+			targetProxy = F4AC9EA71D95C032000E5543 /* PBXContainerItemProxy */;
+		};
+		F4AC9EBD1D95C555000E5543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZipArchive-iOS";
+			targetProxy = F4AC9EBC1D95C555000E5543 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F4AC9E8F1D95C01E000E5543 /* Main.storyboard */ = {
@@ -270,8 +449,10 @@
 		F4AC9E9B1D95C01F000E5543 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BA6M6T665;
+				HEADER_SEARCH_PATHS = Vendor/ZipArchive/SSZipArchive;
 				INFOPLIST_FILE = OpenBlock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.maddox.OpenBlock;
@@ -282,12 +463,40 @@
 		F4AC9E9C1D95C01F000E5543 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BA6M6T665;
+				HEADER_SEARCH_PATHS = Vendor/ZipArchive/SSZipArchive;
 				INFOPLIST_FILE = OpenBlock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.maddox.OpenBlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F4AC9EAB1D95C032000E5543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 7BA6M6T665;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.maddox.OpenBlock.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F4AC9EAC1D95C032000E5543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 7BA6M6T665;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.maddox.OpenBlock.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -308,6 +517,14 @@
 			buildConfigurations = (
 				F4AC9E9B1D95C01F000E5543 /* Debug */,
 				F4AC9E9C1D95C01F000E5543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F4AC9EAA1D95C032000E5543 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AC9EAB1D95C032000E5543 /* Debug */,
+				F4AC9EAC1D95C032000E5543 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
