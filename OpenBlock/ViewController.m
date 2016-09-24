@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NumberDownloader.h"
+#import <CallKit/CallKit.h>
 
 @interface ViewController ()
 @property (nonatomic, strong) NumberDownloader *numberDownloader;
@@ -27,6 +28,10 @@
 			
 			strongSelf.numbers = numbers;
 			[strongSelf.tableView reloadData];
+			
+			[[CXCallDirectoryManager sharedInstance] reloadExtensionWithIdentifier:@"io.maddox.OpenBlock.Extension" completionHandler:^(NSError * _Nullable error) {
+				NSLog(@"%@", error);
+			}];
 		});
 	}];
 
